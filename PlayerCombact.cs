@@ -14,16 +14,11 @@ public class PlayerCombact : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            animator.SetTrigger("Attack");
-            Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
-            foreach (Collider2D enemy in hitEnemies)
-            {
-                Debug.Log("we hit" + enemy.name);
-            }
-            // Attack();
+
+             Attack();
         }
     }
-    /*void Attack()
+    void Attack()
     {
         animator.SetTrigger("Attack");
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
@@ -38,5 +33,5 @@ public class PlayerCombact : MonoBehaviour
             return;
 
        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
-    }*/
+    }
 }
